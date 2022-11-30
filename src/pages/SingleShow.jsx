@@ -1,4 +1,4 @@
-const SingleShow = (show) => {
+const SingleShow = ({ show }) => {
   return <div>{show.name}</div>;
 };
 
