@@ -22,6 +22,7 @@ const Navbar = () => {
               <span>Tv-Maze</span>
             </Link>
           </div>
+
         </div>
       </div>
 
@@ -37,10 +38,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
             onClick={handleCollapse}
           ></button>
-          <div className="login-register" onClick={closeCollapse}>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
-          </div>
+
           <div
             onClick={handleCollapse}
             id="navbarSupportedContent"
@@ -54,6 +52,10 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="login-register" onClick={closeCollapse}>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </div>
       </nav>
     </>

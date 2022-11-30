@@ -80,6 +80,7 @@ body {
   margin: 0 auto ;
   height: 50px;
   margin-right: 20px;
+  margin-top: 0px;
 }
 .navbar-nav .nav-link:hover ,
 .navbar-nav .nav-link.active {
@@ -88,6 +89,27 @@ body {
 }
 .navbar .login-register { 
   display: none;
+  position: absolute;
+  right : 10%;
+  top: 15px;
+}
+
+/* login& register pages */
+.modal-btn {
+  border-color: white;
+  color: white;
+  font-size: 18px;
+}
+.modal-btn:hover {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+.registerLoginPage {
+  padding: 0 20px;
+  display: none;
+}
+.registerLoginPage h5 {
+  margin-bottom: 20px;
 }
 
 /* media query  */
@@ -119,18 +141,17 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 30px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
-    height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
     text-align: center;
-    font-size: 32px;
     position: absolute;
     left: 13px;
-    top: -5px;
+    top: -20px;
+    width: 45px;
+    height: 40px;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 18px;
@@ -148,10 +169,15 @@ body {
   }
   .navbar .login-register a:hover,
   .navbar .login-register a.active {
-    color: var(--light-white)
+    color: var(--light-white);
   }
   .navbar .login-register >:first-child {
     margin-right: 20px;
+  }
+  .registerLoginPage {
+    display: block;
+    width: 90%;
+    margin: auto;
   }
 }
 @media (min-width: 576px) and (max-width: 765px) {  
@@ -182,18 +208,13 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 10px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
+    width: 45px;
     height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
-    text-align: center;
-    font-size: 32px;
-    position: absolute;
-    left: 13px;
-    top: 4px;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 19px;
@@ -211,10 +232,15 @@ body {
   }
   .navbar .login-register a:hover,
   .navbar .login-register a.active {
-    color: var(--light-white)
+    color: var(--light-white);
   }
   .navbar .login-register >:first-child {
     margin-right: 20px;
+  }
+  .registerLoginPage {
+    display: block;
+    width: 80%;
+    margin: auto;
   }
 }
 @media (min-width: 766px) and (max-width: 991px) {  
@@ -245,18 +271,13 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 10px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
+    width: 45px;
     height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
-    text-align: center;
-    font-size: 32px;
-    position: absolute;
-    left: 13px;
-    top: 4px;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 20px;
@@ -278,6 +299,11 @@ body {
   }
   .navbar .login-register >:first-child {
     margin-right: 20px;
+  }
+  .registerLoginPage {
+    display: block;
+    width: 80%;
+    margin: auto;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
