@@ -21,7 +21,7 @@ const Navbar = () => {
                 src="https://res.cloudinary.com/hapiii/image/upload/v1650202719/logos/hwaomthmegmqe5rwst6q.png"
                 alt="logo"
               />
-              <span>Tv show</span>
+              <span>Tv-Maze</span>
             </Link>
           </div>
           <div className="login-register">
