@@ -90,6 +90,18 @@ body {
   display: none;
 }
 
+/* login& register pages */
+.modal-btn {
+  border-color: white;
+  color: white;
+  font-size: 18px;
+}
+
+.modal-btn:hover {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+
 /* media query  */
 @media (max-width: 575px) { 
   .top-navbar {
