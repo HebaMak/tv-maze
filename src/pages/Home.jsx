@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { context } from "../hooks/context";
-import SingleShow from "./SingleShow";
+import SingleShow from "../components/SingleShow";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
 
