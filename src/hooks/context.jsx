@@ -7,9 +7,9 @@ const ContextProvider = ({ children }) => {
   const [shows, setShows] = useState([]);
   const {
     data: allShows,
-    isError,
+    isErorr,
     isLoading,
-  } = useFetch("https://api.tvmaze.com/shos");
+  } = useFetch("https://api.tvmaze.com/shows");
 
   useEffect(() => {
     setShows(allShows);
@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
 
   const value = {
     shows,
-    isError,
+    isErorr,
     isLoading,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
