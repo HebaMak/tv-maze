@@ -1,10 +1,19 @@
 import { useContext } from "react";
 import { context } from "../hooks/context";
+import SingleShow from "./SingleShow";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 function Home() {
   const { shows, isLoading, isError } = useContext(context);
   console.log(shows);
-  return <div className="container homepage"></div>;
+  return (
+    <div className="container homepage">
+      {isLoading && <Loading />}
+      {isError && <Error />}
+      {shows && shows.map((show) => <SingleShow key={shows.id} show={show} />)}
+    </div>
+  );
 }
 
 export default Home;
