@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import Login from "./Login";
-// import Register from "./Register";
+import Login from "./Login";
+import Register from "./Register";
 
 const Navbar = () => {
   const [isCollapsed, setCollapsed] = useState(false);
@@ -25,8 +25,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="login-register">
-            {/* <Login />
-            <Register /> */}
+            <Login />
+            <Register />
           </div>
         </div>
       </div>
@@ -43,10 +43,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
             onClick={handleCollapse}
           ></button>
-          <div className="login-register" onClick={closeCollapse}>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
-          </div>
+
           <div
             onClick={handleCollapse}
             id="navbarSupportedContent"
@@ -60,6 +57,10 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="login-register" onClick={closeCollapse}>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </div>
       </nav>
     </>
