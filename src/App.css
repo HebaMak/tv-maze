@@ -94,7 +94,7 @@ body {
   top: 15px;
 }
 
-/* login& register pages */
+/* login & register pages */
 .modal-btn {
   border-color: white;
   color: white;
@@ -110,6 +110,34 @@ body {
 }
 .registerLoginPage h5 {
   margin-bottom: 20px;
+}
+
+/* single show page */
+.card-container {
+  background-color: var(--dark-color);
+  color: #fff;
+  width: 200px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+}
+.card-container img {
+  border-radius: 10px 10px 0 0;
+  width: 100% !important;
+}
+.card-body {
+  padding: 0;
+}
+.card-container:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+}
+.card-container .card-title {
+  font-size: 16px;
+  padding: 15px 0 0 10px;
+}
+.card-container .heart-rating {
+  padding: 0 10px 15px 10px;
 }
 
 /* media query  */
