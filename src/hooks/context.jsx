@@ -20,8 +20,6 @@ const ContextProvider = ({ children }) => {
     isErorr,
     isLoading,
   };
-  console.log("shows", shows);
-  console.log("all", allShows);
   return <context.Provider value={value}>{children}</context.Provider>;
 };
 
