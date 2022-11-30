@@ -5,6 +5,8 @@ export const context = createContext();
 
 const ContextProvider = ({ children }) => {
   const [shows, setShows] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  console.log(favorites);
   const {
     data: allShows,
     isError,
@@ -15,10 +17,25 @@ const ContextProvider = ({ children }) => {
     setShows(allShows);
   }, [allShows, shows]);
 
+  const handleFavorite = (id) => {
+    if (favorites.includes(id)) {
+      const favoritesIds = favorites.filter((favId) => favId !== id);
+      setFavorites(favoritesIds);
+    } else {
+      setFavorites([...favorites, id]);
+    }
+  };
+
+  const isFav = (id) => {
+    return favorites.includes(id);
+  };
+
   const value = {
     shows,
     isError,
     isLoading,
+    isFav,
+    handleFavorite,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };

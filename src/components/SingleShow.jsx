@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FavIcon from "./FavIcon";
 
 const SingleShow = ({ show }) => {
   const { name, image, id, rating } = show;
@@ -16,8 +17,9 @@ const SingleShow = ({ show }) => {
         <h5 className="card-title">{name}</h5>
         <hr />
         <div className="heart-rating d-flex justify-content-between">
+          <FavIcon id={id} />
           <div>
-            <i class="fas fa-solid fa-star me-2"></i>
+            <i class="fa fa-solid fa-star me-2"></i>
             <span>{rating.average}</span>
           </div>
         </div>

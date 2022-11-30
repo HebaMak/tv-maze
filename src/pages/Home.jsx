@@ -6,7 +6,7 @@ import Error from "../components/Error";
 
 function Home() {
   const { shows, isLoading, isError } = useContext(context);
-  console.log(shows);
+
   return (
     <div className="container homepage">
       {isLoading && (

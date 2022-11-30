@@ -139,6 +139,9 @@ body {
 .card-container .heart-rating {
   padding: 0 10px 15px 10px;
 }
+.heart-rating .fa-star {
+  color: gold;
+}
 
 /* loading page  */
 .loading , 
@@ -159,6 +162,18 @@ body {
   letter-spacing: 1px;
   margin: 50px auto;
 }
+
+/* favorite icon */
+.favorite-icon i {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.favorite-icon i.red {
+  color: red;
+}
+
 
 /* media query  */
 @media (max-width: 575px) { 
