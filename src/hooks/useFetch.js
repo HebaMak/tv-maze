@@ -12,9 +12,11 @@ const useFetch = (url) => {
         return res.json();
       })
       .then((data) => {
-        setLoading(false);
-        setData(data);
-        setError(null);
+        setTimeout(() => {
+          setData(data);
+          setLoading(false);
+          setError(null);
+        }, 2000);
       })
       .catch((err) => {
         setLoading(false);

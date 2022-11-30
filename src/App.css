@@ -140,6 +140,26 @@ body {
   padding: 0 10px 15px 10px;
 }
 
+/* loading page  */
+.loading , 
+.error {
+  position: relative;
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+}
+.loading img ,
+.error img {
+  width: 250px;
+}
+.loading h2 ,
+.error h2 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 50px auto;
+}
+
 /* media query  */
 @media (max-width: 575px) { 
   .top-navbar {
