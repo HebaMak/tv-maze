@@ -1,9 +1,17 @@
+import { BrowserRouter as Routers, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <h1>Hello Tv-Maze</h1>
+      <Routers>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Routers>
     </>
   );
 }
