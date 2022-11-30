@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { context } from "../hooks/context";
 
-function FavIcon({ id }) {
+const FavIcon = ({ id }) => {
   const { isFav, handleFavorite } = useContext(context);
 
   const inFav = isFav(id);
@@ -15,6 +15,6 @@ function FavIcon({ id }) {
       ></i>
     </div>
   );
-}
+};
 
 export default FavIcon;
