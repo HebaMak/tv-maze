@@ -80,6 +80,7 @@ body {
   margin: 0 auto ;
   height: 50px;
   margin-right: 20px;
+  margin-top: 0px;
 }
 .navbar-nav .nav-link:hover ,
 .navbar-nav .nav-link.active {
@@ -99,7 +100,6 @@ body {
   color: white;
   font-size: 18px;
 }
-
 .modal-btn:hover {
   border: 1px solid var(--light-color);
   color: var(--light-color);
@@ -111,6 +111,7 @@ body {
 .registerLoginPage h5 {
   margin-bottom: 20px;
 }
+
 /* media query  */
 @media (max-width: 575px) { 
   .top-navbar {
@@ -140,18 +141,17 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 30px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
-    height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
     text-align: center;
-    font-size: 32px;
     position: absolute;
     left: 13px;
     top: -20px;
+    width: 45px;
+    height: 40px;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 18px;
@@ -208,16 +208,13 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 10px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
+    width: 45px;
     height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
-    text-align: center;
-    font-size: 32px;
-    position: absolute;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 19px;
@@ -274,16 +271,13 @@ body {
     opacity: 1;
     margin-top: 10px;
     border-radius: 0px 0 10px 10px;
+    margin-top: 10px;
   }
   .navbar .navbar-toggler {
     background-color: #fff;
-    width: 50px;
+    width: 45px;
     height: 40px;
-  }
-  .navbar .navbar-toggler-icon {
-    text-align: center;
-    font-size: 32px;
-    position: absolute;
+    background-size: 85%;
   }
   .navbar-nav .nav-link {
     font-size: 20px;
