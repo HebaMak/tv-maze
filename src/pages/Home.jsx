@@ -9,8 +9,10 @@ function Home() {
   console.log(shows);
   return (
     <div className="container homepage">
-      {isLoading && <Loading />}
-      {isError && <Error />}
+      {isLoading && (
+        <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming 😀" />
+      )}
+      {isError && <Error text="Error in Fetching data" />}
       {shows && shows.map((show) => <SingleShow key={shows.id} show={show} />)}
     </div>
   );
