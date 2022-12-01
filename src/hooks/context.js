@@ -31,6 +31,10 @@ const ContextProvider = ({ children }) => {
     }
   };
 
+  const clearFavorites = () => {
+    setFavorites([]);
+  };
+
   const isFav = (id) => {
     return favorites.includes(id);
   };
@@ -42,6 +46,7 @@ const ContextProvider = ({ children }) => {
     isFav,
     handleFavorite,
     favorites,
+    clearFavorites,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };

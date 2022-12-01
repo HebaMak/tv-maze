@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import Error from "../components/Error";
 
 const Favorites = () => {
-  const { favorites } = useContext(context);
+  const { favorites, clearFavorites } = useContext(context);
   const [shows, setShows] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -30,11 +30,20 @@ const Favorites = () => {
   }, [favorites]);
 
   return (
-    <div className="container">
+    <div className="container favorites_page">
       {shows.length === 0 && <h1>You Haven't Chosen any Favorites yet! </h1>}
       {isLoading && <Loading text="Favorite Shows coming soon!" />}
       {isError && <Error text="Error is Found!" />}
-      {shows && shows.map((show) => <SingleShow key={show.id} show={show} />)}
+      {shows.length > 0 && (
+        <>
+          <button className="clear_fav" onClick={clearFavorites}>
+            Clear Favorites
+          </button>
+          {shows.map((show) => (
+            <SingleShow key={show.id} show={show} />
+          ))}
+        </>
+      )}
     </div>
   );
 };
