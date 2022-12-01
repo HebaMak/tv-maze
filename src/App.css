@@ -169,11 +169,42 @@ body {
   cursor: pointer;
   color: #fff;
 }
-
 .favorite-icon i.red {
   color: red;
 }
 
+/* about */
+.about-page {
+  min-height: 100vh;
+}
+.aboutpage-content {
+  width: 90%;
+  margin: auto;
+}
+.about-page h1 {
+  margin: 20px 0;
+}
+.about-page .intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.about-page .intro span {
+  color: var(--dark-color);
+  font-size: 20px;
+}
+.about-page .intro a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-size: 20px;
+}
+.about-page h4 {
+  margin: 20px 0;
+}
+.about-page ol li {
+  margin: 10px 0;
+  font-size: 17px;
+}
 
 /* media query  */
 @media (max-width: 575px) { 
