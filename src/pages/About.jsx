@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="container about-page " data-testid="about-test">
+    <div className="container about-page ">
       <div className="aboutpage-content">
         <h1>About</h1>
 
