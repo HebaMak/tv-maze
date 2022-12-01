@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import FavIcon from "./FavIcon";
 
 const SingleShow = ({ show }) => {
-  const { name, image, id, rating } = show;
+  const { id, name, image, rating } = show;
 
   return (
     <div className="card-container">
