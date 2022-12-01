@@ -5,8 +5,12 @@ export const context = createContext();
 
 const ContextProvider = ({ children }) => {
   const [shows, setShows] = useState([]);
-  const [favorites, setFavorites] = useState([]);
-  console.log(favorites);
+  const [favorites, setFavorites] = useState(
+    localStorage.getItem("favorites")
+      ? JSON.parse(localStorage.getItem("favorites"))
+      : []
+  );
+
   const {
     data: allShows,
     isError,
@@ -15,7 +19,8 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     setShows(allShows);
-  }, [allShows, shows]);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [allShows, shows, favorites]);
 
   const handleFavorite = (id) => {
     if (favorites.includes(id)) {
@@ -36,6 +41,7 @@ const ContextProvider = ({ children }) => {
     isLoading,
     isFav,
     handleFavorite,
+    favorites,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };
