@@ -40,6 +40,10 @@ const About = () => {
           <li>People page there are most famous actors and actress.</li>
           <li>I use Bootsrtap Navbar, cards, Modal and carousel.</li>
           <li>The app is responsive for different devices screen.</li>
+          <li>
+            I watched this video https://www.youtube.com/watch?v=zDwgTRkPkF4 and
+            took some ideas from it
+          </li>
         </ol>
       </div>
     </div>
