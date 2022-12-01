@@ -55,6 +55,11 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to="/favorites" className="nav-link">
+                  Favorites
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

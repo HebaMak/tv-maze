@@ -13,7 +13,7 @@ function Home() {
         <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming 😀" />
       )}
       {isError && <Error text="Error in Fetching data" />}
-      {shows && shows.map((show) => <SingleShow key={shows.id} show={show} />)}
+      {shows && shows.map((show) => <SingleShow key={show.id} show={show} />)}
     </div>
   );
 }
