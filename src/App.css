@@ -2,7 +2,7 @@
 :root {
   --dark-color: rgb(82, 99, 94);
   --darker: rgb(71, 84, 80);
-  --light-color: rgb(223, 248, 241);
+  --light-color: rgb(155, 211, 195);
   --light-white: rgb(240, 248, 246);
   --dark-black: #212528;
 }
@@ -205,6 +205,88 @@ body {
   margin: 10px 0;
   font-size: 17px;
 }
+
+/* show details page  */
+.show-details {
+  margin-top: 50px;
+  padding-top: 30px;
+  min-height: 700px;
+}
+.show-details-container {
+  display: flex;
+}
+.show-details-container .container-cart {
+  flex: 2;
+}
+.show-details-container .text-details {
+  flex: 6;
+  padding-left: 20px;
+}
+.show-details-container .text-details h3 {
+  margin: 15px 0;
+}
+.show-details-container .favHeart {
+  background-color: var(--dark-color);
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  justify-content: center;
+}
+.show-details-container .favHeart:hover {
+  background-color: var(--darker)
+}
+.show-details-container .favHeart span {
+  margin-left: 10px;
+}
+.text-details .list-group-item span {
+  margin: 0 5px;
+  display: inline-block;
+}
+.text-details p {
+  margin: 20px 0;
+  line-height: 1.7;
+  font-size: 18px;
+}
+.show-details-container .summary {
+  margin-top: 20px;
+}
+.show-details-container .show-info {
+  flex: 4;
+  margin-left: 20px;
+}
+.show-details-container .show-info-content {
+  background-color:rgb(249, 249, 249);
+  border-radius: 3px;
+  padding: 20px;
+}
+.show-details-container .show-info h3 {
+  margin: 15px 0;
+  font-size: 32px;
+  font-weight: 200;
+  color: #666;
+  text-transform: capitalize;
+}
+.show-details-container .show-info li {
+  margin: 10px 0;
+}
+.show-details .show-cast {
+  margin: 30px 0;
+}
+.show-cast h3 {
+  margin: 15px 0;
+  font-size: 32px;
+  font-weight: 200;
+  color: #666;
+}
+.show-cast .person {
+  margin: 10px 0;
+  width: 400px;
+}
+.show-cast .person img {
+  width: 150px;
+  margin-right: 10px;
+}
+
 
 /* media query  */
 @media (max-width: 575px) { 
