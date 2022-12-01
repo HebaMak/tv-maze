@@ -189,13 +189,14 @@ body {
   line-height: 1.7;
   margin-bottom: 30px;
 }
-.about-page .intro span {
+.about-page span {
   color: var(--dark-color);
   font-size: 20px;
 }
-.about-page .intro a {
+.about-page  a {
   text-decoration: none;
   color: var(--dark-color);
+  color: rgb(255, 28, 2);
   font-size: 20px;
 }
 .about-page h4 {
