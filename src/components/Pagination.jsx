@@ -14,19 +14,22 @@ const Pagination = ({ shows }) => {
     pageNumbers.push(i);
   }
 
-  const prevPage = () => {
+  const prevPage = (e) => {
+    e.preventDefault();
     currentPage > 1 && currentPage <= pageNumbers.length
       ? setCurrentPage(currentPage - 1)
       : setCurrentPage(pageNumbers.length);
   };
 
-  const nextPage = () => {
+  const nextPage = (e) => {
+    e.preventDefault();
     currentPage >= 1 && currentPage < pageNumbers.length
       ? setCurrentPage(currentPage + 1)
       : setCurrentPage(1);
   };
 
   const handleCurrentPage = (e, number) => {
+    e.preventDefault();
     setCurrentPage(number);
     e.target.classList.add("active_page");
   };
