@@ -1,13 +1,14 @@
 import { useState } from "react";
+import Person from "./Person";
 import SingleShow from "./SingleShow";
 
-const Pagination = ({ shows }) => {
+const Pagination = ({ shows, num, people }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const showsPerPage = 15;
+  const showsPerPage = +num;
 
   const indexOfLast = currentPage * showsPerPage;
   const indexOfFirst = indexOfLast - showsPerPage;
-  const currentShows = shows.slice(indexOfFirst, indexOfLast);
+  const currentData = shows.slice(indexOfFirst, indexOfLast);
 
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(shows.length / showsPerPage); i++) {
@@ -63,9 +64,13 @@ const Pagination = ({ shows }) => {
         </li>
       </ul>
       <div className="pagination_body">
-        {currentShows.map((show) => (
-          <SingleShow show={show} />
-        ))}
+        {currentData.map((element) =>
+          people ? (
+            <Person person={element} key={element.id} />
+          ) : (
+            <SingleShow show={element} key={element.id} />
+          )
+        )}
       </div>
     </nav>
   );

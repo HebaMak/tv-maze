@@ -13,7 +13,7 @@ function Home() {
         <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming 😀" />
       )}
       {isError && <Error text="Error in Fetching data" />}
-      {shows && <Pagination shows={shows} />}
+      {shows && <Pagination shows={shows} num="15" />}
     </div>
   );
 }
