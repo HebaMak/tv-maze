@@ -309,6 +309,29 @@ body {
   color:#fff
 }
 
+/* pagination */
+.pagination {
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.pagination_body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pagination .active_page {
+  background-color: var(--dark-black);
+  border: 1px solid var(--dark-black);
+  color:#fff !important;
+}
+.pagination .page-link {
+  color: var(--dark-black);
+  border: 1px solid var(--dark-black);
+}
+.pagination .prv_next {
+  background-color: var(--light-white);
+}
+
 /* media query  */
 @media (max-width: 575px) { 
   .top-navbar {
