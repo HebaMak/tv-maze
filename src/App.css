@@ -341,6 +341,44 @@ body {
   background-color: var(--light-white);
 }
 
+
+/* footer  */
+.footer {
+  padding: 10px 0;
+  background-color: var(--dark-black);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.footer .facebook {
+  color: #4584ff;
+}
+.footer .twitter {
+  color: rgba(67, 171, 240, 0.837)
+}
+.footer .instagram {
+  color: #e4405f;
+}
+.footer .reddit {
+  color: #ff4500;
+}
+.footer .social-media ul li {
+  margin: 10px 0 0 15px;
+}
+.footer .social-media ul i {
+  display: inline-block;
+  font-size: 22px;
+}
+.footer .social-media ul i:hover {
+  color:#fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.footer h6 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
 /* media query  */
 @media (max-width: 575px) { 
   .top-navbar {
@@ -421,7 +459,31 @@ body {
   .pagination .prv_next {
     width: 55px;
   }
+  .footer h4 {
+    font-size: 16px;
+  }
+  .footer .social-media ul li {
+    margin: 5px 0 0 10px;
+  }
+  .footer .social-media ul i {
+    font-size: 16px;
+  }
+  .footer h6 {
+    font-size: 16px;
+  }.footer h4 {
+    font-size: 16px;
+  }
+  .footer .social-media ul li {
+    margin: 5px 0 0 10px;
+  }
+  .footer .social-media ul i {
+    font-size: 16px;
+  }
+  .footer h6 {
+    font-size: 16px;
+  }
 }
+
 @media (min-width: 576px) and (max-width: 765px) {  
   .top-navbar {
     height: 60px;
@@ -497,7 +559,17 @@ body {
   .pagination .prv_next {
     width: 60px;
   }
+  .footer .social-media ul li {
+    margin: 5px 0 0 10px;
+  }
+  .footer .social-media ul i {
+    font-size: 17px;
+  }
+  .footer h6 {
+    font-size: 17px;
+  }
 }
+
 @media (min-width: 766px) and (max-width: 991px) {  
   .top-navbar {
     height: 60px;
@@ -572,5 +644,3 @@ body {
     font-size: 36px;
   }
 }
-
-
