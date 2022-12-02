@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import { context } from "../hooks/context";
-import SingleShow from "../components/SingleShow";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
+import Pagination from "../components/Pagination";
 
 const Favorites = () => {
   const { favorites, clearFavorites } = useContext(context);
@@ -39,9 +39,7 @@ const Favorites = () => {
           <button className="clear_fav" onClick={clearFavorites}>
             Clear Favorites
           </button>
-          {shows.map((show) => (
-            <SingleShow key={show.id} show={show} />
-          ))}
+          {shows && <Pagination shows={shows} />}
         </>
       )}
     </div>
