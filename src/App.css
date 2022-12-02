@@ -411,12 +411,6 @@ body {
   .favorites_page h1 {
     font-size: 28px;
   }
-  /* .pagination .page-link {
-    display: none;
-  }
-  .pagination .prv_next {
-    display: block;
-  } */
   .pagination .page-link {
     width: 23px;
     text-align: center;
