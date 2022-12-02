@@ -14,18 +14,6 @@ const ShowDetails = () => {
   const { data: episodes } = useFetch(`${URL}/${ID}/episodes`);
   const { data: crew } = useFetch(`${URL}/${ID}/crew`);
 
-  // const [show , setShow] = useState({})
-
-  //clear summary
-  const removeTags = (text) => {
-    if (text === null || text === "") {
-      return false;
-    } else {
-      text = text.toString();
-    }
-    return text.replace(/(<([^>]+)>)/gi, "");
-  };
-
   // show creators
   const Creators = () => {
     const creators = crew.filter((member) => member.type === "Creator");
@@ -70,8 +58,6 @@ const ShowDetails = () => {
     premiered,
     officialSite,
   } = show;
-
-  console.log("show", show);
 
   return (
     <div className="container show-details">
@@ -127,9 +113,9 @@ const ShowDetails = () => {
                 )}
                 <h5 className="summary">Summary:</h5>
                 <p>
-                  {summary === null
+                  {summary === null || summary === ""
                     ? "No Summary"
-                    : summary && removeTags(summary)}
+                    : summary && summary.replace(/(<([^>]+)>)/gi, "")}
                 </p>
               </div>
             </div>
