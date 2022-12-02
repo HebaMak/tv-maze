@@ -343,6 +343,85 @@ body {
   background-color: var(--light-white);
 }
 
+/* people page & person page */
+.people-page {
+  margin-bottom: 20px;
+  position: relative;
+}
+.people-page h1 {
+  margin-bottom: 30px;
+}
+.pagination-person {
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  background-color: var(--dark-color);
+  margin-bottom: 20px;
+  position: relative;
+  color: #fff;
+}
+.pagination-person a {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--dark-color);
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 1px 50px;
+}
+.pagination-person a:hover {
+  color: var(--dark-color);
+  background-color: rgb(255, 255, 255);
+}
+.pagination-person img {
+  width: 100%;
+}
+.pagination-person h5 {
+  padding: 10px 0;
+}
+.pagination-person:hover .person-info {
+  bottom: -15px;
+}
+.person-info {
+  background-color: rgba(82, 99, 94, 0.8);
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  color: #fff;
+  padding-top: 10px;
+  transition: all .5s ease-in-out;
+}
+.person-info li {
+  margin-bottom: 10px;
+}
+.people-page .back_people {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.search_people_form {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.search_people_field {
+  height: 30px;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px 0 0 5px;
+  text-indent: 5px;
+}
+.search_people_btn {
+  border: 1px solid var(--dark-color);
+  height: 30px;
+  background-color: var(--dark-color);
+  color: #fff;
+  margin-top: -5px;
+  padding: 3px 5px;
+  border-radius: 0 5px 5px 0;
+}
 
 /* footer  */
 .footer {

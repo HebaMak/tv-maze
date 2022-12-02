@@ -19,7 +19,7 @@ const SingleShow = ({ show }) => {
         <div className="heart-rating d-flex justify-content-between">
           <FavIcon id={id} />
           <div>
-            <i class="fa fa-solid fa-star me-2"></i>
+            <i className="fa fa-solid fa-star me-2"></i>
             <span>{rating.average}</span>
           </div>
         </div>

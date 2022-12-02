@@ -48,7 +48,7 @@ const Favorites = () => {
           <button className="clear_fav" onClick={clearFavorites}>
             Clear Favorites
           </button>
-          {shows && <Pagination shows={shows} />}
+          {shows && <Pagination shows={shows} num="20" />}
         </>
       )}
     </div>
