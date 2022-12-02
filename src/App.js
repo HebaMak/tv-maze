@@ -8,7 +8,6 @@ import Favorites from "./pages/Favorites";
 import About from "./pages/About";
 import ShowDetails from "./pages/ShowDetails";
 import "./App.css";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Home />} />
           </Routes>
-          <Footer />
         </Routers>
       </ContextProvider>
     </>
