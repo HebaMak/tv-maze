@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 export const context = createContext();
 
 const ContextProvider = ({ children }) => {
-  const [shows, setShows] = useState([]);
+  const [shows, setShows] = useState("");
   const [favorites, setFavorites] = useState(
     localStorage.getItem("favorites")
       ? JSON.parse(localStorage.getItem("favorites"))
