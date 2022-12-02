@@ -289,17 +289,26 @@ body {
 }
 
 /* favorites page */
-.favorites-page {
+.favorites_page {
   min-height: 100vh;
   margin-top: 20px;
-}
-.favorites-page h1 {
   text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.favorites_page h1 {
+  text-align: center;
+  margin: 100px 0 50px;
+  font-size: 40px;
+}
+.favorites_page .doit_img {
+  width: 250px;
+  border-radius: 10px ;
 }
 .favorites_page .clear_fav {
   border: 1px solid var(--dark-color);
   padding: 10px 15px;
-  margin-bottom: 50px;
+  margin: 30px 0;
   text-transform: capitalize;
   border-radius: 5px;
   transition: all .5s ease-in-out;
@@ -399,6 +408,9 @@ body {
     width: 90%;
     margin: auto;
   }
+  .favorites_page h1 {
+    font-size: 28px;
+  }
 }
 @media (min-width: 576px) and (max-width: 765px) {  
   .top-navbar {
@@ -461,6 +473,9 @@ body {
     display: block;
     width: 80%;
     margin: auto;
+  }
+  .favorites_page h1 {
+    font-size: 32px;
   }
 }
 @media (min-width: 766px) and (max-width: 991px) {  
@@ -525,10 +540,16 @@ body {
     width: 80%;
     margin: auto;
   }
+  .favorites_page h1 {
+    font-size: 34px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) { 
   .navbar-nav .nav-link {
     font-size: 20px;
+  }
+  .favorites_page h1 {
+    font-size: 36px;
   }
 }
 

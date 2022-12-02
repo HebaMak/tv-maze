@@ -31,7 +31,16 @@ const Favorites = () => {
 
   return (
     <div className="container favorites_page">
-      {shows.length === 0 && <h1>You Haven't Chosen any Favorites yet! </h1>}
+      {shows.length === 0 && (
+        <>
+          <h1>You Haven't Chosen any Favorites yet! </h1>
+          <img
+            src="https://res.cloudinary.com/hapiii/image/upload/v1669983392/gif%20/ntcpbgzzwt9vh5fkyfm2.gif"
+            alt="just do it"
+            className="doit_img"
+          />
+        </>
+      )}
       {isLoading && <Loading text="Favorite Shows coming soon!" />}
       {isError && <Error text="Error is Found!" />}
       {shows.length > 0 && (
