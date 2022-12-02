@@ -65,6 +65,7 @@ const ShowDetails = () => {
       {isError && <Error text="Something Went Wrong" />}
       {show && (
         <>
+          <h2 className="show_title">{name} Show Details</h2>
           <div className="show-details-container">
             <div className="container-cart">
               <img
