@@ -411,6 +411,22 @@ body {
   .favorites_page h1 {
     font-size: 28px;
   }
+  /* .pagination .page-link {
+    display: none;
+  }
+  .pagination .prv_next {
+    display: block;
+  } */
+  .pagination .page-link {
+    width: 23px;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    align-items: center;
+  }
+  .pagination .prv_next {
+    width: 55px;
+  }
 }
 @media (min-width: 576px) and (max-width: 765px) {  
   .top-navbar {
@@ -476,6 +492,16 @@ body {
   }
   .favorites_page h1 {
     font-size: 32px;
+  }
+  .pagination .page-link {
+    width: 25px;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    align-items: center;
+  }
+  .pagination .prv_next {
+    width: 60px;
   }
 }
 @media (min-width: 766px) and (max-width: 991px) {  
