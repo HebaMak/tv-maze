@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFetch";
 import Pagination from "../components/Pagination";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
+import Ads from "../components/Ads";
 
 const People = () => {
   const {
@@ -48,8 +49,7 @@ const People = () => {
 
   return (
     <div className="container people-page">
-      {/* ads  */}
-      <div className="ads"></div>
+      <Ads />
 
       <h1>People</h1>
       <form onSubmit={handleSearch} className="search_people_form">
