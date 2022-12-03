@@ -50,6 +50,16 @@ const Search = () => {
 
   return (
     <div className="container searching-page">
+      <form className="searchField-form d-flex" onSubmit={handleSearch}>
+        <input
+          type="text"
+          className="search-input"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+          placeholder="search shows"
+        />
+        <i className="fa fa-search search-btn" onClick={handleSearch}></i>
+      </form>
       <div className="form">
         <form onSubmit={handleSearch}>
           <input
