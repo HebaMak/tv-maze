@@ -52,15 +52,15 @@ const People = () => {
       <Ads />
 
       <h1>People</h1>
-      <form onSubmit={handleSearch} className="search_people_form">
+      <form className="searchField-form d-flex" onSubmit={handleSearch}>
         <input
           type="text"
-          className="search_people_field"
+          className="search-input"
           placeholder="search people ..."
           value={searchValue}
           onChange={(e) => handleChange(e)}
         />
-        <button className="search_people_btn">Search</button>
+        <i className="fa fa-search search-btn" onClick={handleSearch}></i>
       </form>
       <div className="people-content">
         {isLoading && <Loading text="People coming soon!" />}

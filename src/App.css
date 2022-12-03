@@ -401,26 +401,6 @@ body {
   border-radius: 10px;
   font-weight: bold;
 }
-.search_people_form {
-  position: absolute;
-  right: 0;
-  top: 200px;
-}
-.search_people_field {
-  height: 30px;
-  border: 1px solid var(--dark-color);
-  border-radius: 5px 0 0 5px;
-  text-indent: 5px;
-}
-.search_people_btn {
-  border: 1px solid var(--dark-color);
-  height: 30px;
-  background-color: var(--dark-color);
-  color: #fff;
-  margin-top: -5px;
-  padding: 3px 5px;
-  border-radius: 0 5px 5px 0;
-}
 
 /* ads page  */
 .ads-container {
@@ -470,6 +450,47 @@ body {
 }
 .clear-btn.none {
   display: none;
+}
+
+/* searchField page  */
+.searchField-form {
+  position: fixed;
+  top: 20px;
+  left: 25%;
+  width: 43%;
+  z-index: 9999;
+}
+.searchField-form .search-input {
+  width: 90%;
+  height: 40px;
+  text-indent: 15px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  outline: none;
+  position: relative;
+  border: none;
+}
+.searchField-form .search-input::placeholder {
+  font-size: 15px;
+}
+.searchField-form .search-input:focus {
+  outline: none
+}
+.searchField-form .search-btn {
+  background-color: var(--dark-color);
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  width: 20%;
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+.searchField-form .search-btn:hover {
+  background-color: var(--darker);
+  color: var(--light-white)
 }
 
 /* footer  */
@@ -634,6 +655,21 @@ body {
   .form {
     width: 90%;
   }
+  .searchField-form {
+    top: 13px;
+    left: 35%;
+    width: 60%;
+  }
+  .searchField-form .search-input {
+    height: 35px;
+  }
+  .searchField-form .search-input::placeholder {
+    font-size: 13px;
+  }
+  .searchField-form .search-btn {
+    height: 35px;
+    line-height: 35px;
+  }
   .footer h4 {
     font-size: 16px;
   }
@@ -768,6 +804,21 @@ body {
   .form {
     width: 90%;
   }
+  .searchField-form {
+    top: 13px;
+    left: 35%;
+    width: 60%;
+  }
+  .searchField-form .search-input {
+    height: 35px;
+  }
+  .searchField-form .search-input::placeholder {
+    font-size: 13px;
+  }
+  .searchField-form .search-btn {
+    height: 35px;
+    line-height: 35px;
+  }
   .footer .social-media ul li {
     margin: 5px 0 0 10px;
     font-size: 17px;
@@ -888,6 +939,21 @@ body {
   }
   .form {
     width: 90%;
+  }
+  .searchField-form {
+    top: 13px;
+    left: 35%;
+    width: 60%;
+  }
+  .searchField-form .search-input {
+    height: 35px;
+  }
+  .searchField-form .search-input::placeholder {
+    font-size: 13px;
+  }
+  .searchField-form .search-btn {
+    height: 35px;
+    line-height: 35px;
   }
 }
 
