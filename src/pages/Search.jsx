@@ -60,6 +60,20 @@ const Search = () => {
             onChange={(e) => setSearchValue(e.target.value)}
           />
           <button className="btn form-control search-btn">Search</button>
+          <button
+            className={
+              results.length > 0
+                ? "btn form-control btn-danger clear-btn"
+                : "btn form-control btn-danger clear-btn none"
+            }
+            onClick={(e) => {
+              e.preventDefault();
+              setResults([]);
+              setSearchValue("");
+            }}
+          >
+            Clear Search
+          </button>
         </form>
       </div>
 

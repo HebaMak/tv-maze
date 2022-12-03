@@ -468,6 +468,12 @@ body {
 .search-btn:hover {
   background-color: rgb(99, 219, 185);
 }
+.clear-btn {
+  font-size: 20px;
+}
+.clear-btn.none {
+  display: none;
+}
 
 /* footer  */
 .footer {
