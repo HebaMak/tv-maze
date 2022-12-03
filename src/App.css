@@ -2,7 +2,8 @@
 :root {
   --dark-color: rgb(82, 99, 94);
   --darker: rgb(71, 84, 80);
-  --light-color: rgb(155, 211, 195);
+  /* --light-color: rgb(155, 211, 195); */
+  --light-color: rgb(113, 251, 212);
   --light-white: rgb(240, 248, 246);
   --dark-black: #212528;
 }
@@ -347,6 +348,7 @@ body {
 .people-page {
   margin-bottom: 20px;
   position: relative;
+  min-height: 100vh;
 }
 .people-page h1 {
   margin-bottom: 30px;
@@ -434,6 +436,43 @@ body {
 }
 .right-ads {
   width: 30%;
+}
+
+/* search page */
+.searching-page {
+  min-height: 100vh;
+}
+.form {
+  padding: 20px;
+  margin: auto;
+  width: 70%;
+}
+.form .form-control {
+  height: 50px;
+  margin-bottom: 20px;
+}
+.form input:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.search-item {
+  margin: 20px;
+  width: 300px;
+}
+.search-btn {
+  background-color: var(--light-color);
+  color: var(--dark-black);
+  font-size: 20px;
+  transition: all .5s ease-in-out;
+}
+.search-btn:hover {
+  background-color: rgb(99, 219, 185);
+}
+.clear-btn {
+  font-size: 20px;
+}
+.clear-btn.none {
+  display: none;
 }
 
 /* footer  */
@@ -595,6 +634,9 @@ body {
   .search_people_form {
     top: 350px;
   }
+  .form {
+    width: 90%;
+  }
   .footer h4 {
     font-size: 16px;
   }
@@ -726,6 +768,9 @@ body {
   .search_people_form {
     top: 350px;
   }
+  .form {
+    width: 90%;
+  }
   .footer .social-media ul li {
     margin: 5px 0 0 10px;
     font-size: 17px;
@@ -844,6 +889,9 @@ body {
   .search_people_form {
     top: 360px;
   }
+  .form {
+    width: 90%;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) { 
@@ -873,5 +921,8 @@ body {
     line-height: 1.5;
     font-size: 16px;
     width: 100%;
+  }
+  .form {
+    width: 80%;
   }
 }

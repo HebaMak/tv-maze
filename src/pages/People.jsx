@@ -54,8 +54,8 @@ const People = () => {
       <h1>People</h1>
       <form onSubmit={handleSearch} className="search_people_form">
         <input
-          className="search_people_field"
           type="text"
+          className="search_people_field"
           placeholder="search people ..."
           value={searchValue}
           onChange={(e) => handleChange(e)}

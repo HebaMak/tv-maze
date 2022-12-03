@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Person from "./Person";
+import SearchShow from "./SearchShow";
 import SingleShow from "./SingleShow";
 
-const Pagination = ({ shows, num, people }) => {
+const Pagination = ({ shows, num, people, search }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const showsPerPage = +num;
 
@@ -67,6 +68,8 @@ const Pagination = ({ shows, num, people }) => {
         {currentData.map((element) =>
           people ? (
             <Person person={element} key={element.id} />
+          ) : search ? (
+            <SearchShow show={element} key={element.show.id} />
           ) : (
             <SingleShow show={element} key={element.id} />
           )

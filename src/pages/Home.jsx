@@ -10,11 +10,11 @@ function Home() {
 
   return (
     <div className="container homepage">
+      <Ads />
       {isLoading && (
         <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming 😀" />
       )}
       {isError && <Error text="Error in Fetching data" />}
-      <Ads />
       {shows && <Pagination shows={shows} num="15" />}
     </div>
   );
