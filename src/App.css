@@ -405,7 +405,7 @@ body {
 .search_people_form {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 200px;
 }
 .search_people_field {
   height: 30px;
@@ -421,6 +421,19 @@ body {
   margin-top: -5px;
   padding: 3px 5px;
   border-radius: 0 5px 5px 0;
+}
+
+/* ads page  */
+.ads-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.left-ads {
+  width: 65%;
+}
+.right-ads {
+  width: 30%;
 }
 
 /* footer  */
@@ -568,6 +581,20 @@ body {
     font-size: 15px;
     width: 100%;
   }
+  .ads-container {
+    display: block;
+  }
+  .left-ads {
+    width: 95%;
+    margin: 0 auto 15px;
+  }
+  .right-ads {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .search_people_form {
+    top: 350px;
+  }
   .footer h4 {
     font-size: 16px;
   }
@@ -685,6 +712,20 @@ body {
     font-size: 16px;
     width: 100%;
   }
+  .ads-container {
+    display: block;
+  }
+  .left-ads {
+    width: 95%;
+    margin: 0 auto 15px;
+  }
+  .right-ads {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .search_people_form {
+    top: 350px;
+  }
   .footer .social-media ul li {
     margin: 5px 0 0 10px;
     font-size: 17px;
@@ -788,6 +829,20 @@ body {
     line-height: 1.5;
     font-size: 15px;
     width: 100%;
+  }
+  .ads-container {
+    display: block;
+  }
+  .left-ads {
+    width: 95%;
+    margin: 0 auto 15px;
+  }
+  .right-ads {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .search_people_form {
+    top: 360px;
   }
 }
 
