@@ -127,8 +127,8 @@ const ShowDetails = () => {
                 <ul className="list-unstyled">
                   <li>
                     <strong>Web channel: </strong>
-                    {network.country.name} -{network.name} -
-                    {premiered ? premiered.slice(0, 4) : ""}
+                    {network && network.country.name} -{network && network.name}{" "}
+                    -{premiered ? premiered.slice(0, 4) : ""}
                     {ended ? `-${ended.slice(0, 4)}` : ""}
                   </li>
                   <li>
@@ -189,9 +189,9 @@ const ShowDetails = () => {
                     return (
                       <div className="person d-flex" key={person.id}>
                         <img
-                          alt={person.person.name}
+                          alt={person && person.person.name}
                           src={
-                            person.person.image
+                            person && person.person.image
                               ? person.person.image.medium
                               : "https://plchldr.co/i/210x295"
                           }
