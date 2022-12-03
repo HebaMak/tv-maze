@@ -15,14 +15,6 @@
 body {
   padding-top: 150px;
 }
-.loading-img {
-  width: 70%;
-  text-align: center;
-  margin: auto;
-}
-.loading-img img {
-  width: 50%;
-}
 
 /* navbar page */
 .top-navbar {
@@ -93,6 +85,11 @@ body {
   position: absolute;
   right : 10%;
   top: 15px;
+}
+
+/* home page */
+.homepage {
+  min-width: 100vh;
 }
 
 /* login & register pages */
