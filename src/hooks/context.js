@@ -29,7 +29,7 @@ const ContextProvider = ({ children }) => {
       setShows(allShows);
     }
     localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [allShows, shows, favorites]);
+  }, [allShows, shows, favorites, searchResults]);
 
   const handleFavorite = (id) => {
     if (favorites.includes(id)) {
