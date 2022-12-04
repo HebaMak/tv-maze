@@ -89,7 +89,41 @@ body {
 
 /* home page */
 .homepage {
-  min-width: 100vh;
+  min-height: 100vh;
+}
+.homepage h1 {
+  margin-bottom: 20px;
+}
+.home-content {
+  display: flex;
+  justify-content: space-between;
+}
+.home-content .shows {
+  width: 82%;
+}
+
+/* filter sidebar  */
+.filters {
+  width: 15%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.filters select {
+  margin: 10px auto 30px;
+  display: block;
+  height: 35px;
+  width: 90%;
+  padding: 5px;
+}
+.filters label {
+  text-transform: capitalize;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filters option {
+  text-transform: capitalize;
 }
 
 /* login & register pages */
@@ -590,6 +624,26 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
+  .homepage h1 {
+    font-size: 26px;
+  }
+  .home-content {
+    display: block
+  }
+  .home-content .shows {
+    width: 100%;
+  } 
+  .filters {
+    width: 80%;
+  }
+  .filters select {
+    display: inline;
+    width: 65%;
+  }
+  .filters label {
+    display: inline-block;
+    width: 35%;
+  }
   .registerLoginPage {
     display: block;
     width: 90%;
@@ -739,6 +793,26 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
+  .homepage h1 {
+    font-size: 26px;
+  }
+  .home-content {
+    display: block
+  }
+  .home-content .shows {
+    width: 100%;
+  } 
+  .filters {
+    width: 70%;
+  }
+  .filters select {
+    display: inline;
+    width: 65%;
+  }
+  .filters label {
+    display: inline-block;
+    width: 35%;
+  }
   .registerLoginPage {
     display: block;
     width: 80%;
@@ -885,6 +959,27 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
+  .homepage h1 {
+    font-size: 28px;
+  }
+  .home-content {
+    display: block
+  }
+  .home-content .shows {
+    width: 100%;
+  } 
+  .filters {
+    width: 100%;
+  }
+  .filters select {
+    display: inline;
+    width: 30%;
+    margin-right: 5%;
+  }
+  .filters label {
+    display: inline-block;
+    width: 15%;
+  }
   .registerLoginPage {
     display: block;
     width: 80%;
@@ -961,6 +1056,9 @@ body {
   .navbar-nav .nav-link {
     font-size: 20px;
   }
+  .homepage h1 {
+    font-size: 34px;
+  }
   .favorites_page h1 {
     font-size: 36px;
   }
@@ -989,3 +1087,4 @@ body {
     width: 80%;
   }
 }
+
