@@ -56,15 +56,6 @@ const ContextProvider = ({ children }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     setResults(searchResults);
-    // if (searchValue.trim().length === 0) {
-    //   setShows([]);
-    // } else {
-    //   if (searchResults.length === 0) {
-    //     setShows([]);
-    //   } else {
-    //     setShows(searchResults);
-    //   }
-    // }
   };
 
   const value = {
