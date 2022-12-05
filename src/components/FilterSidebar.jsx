@@ -21,8 +21,8 @@ const FilterSidebar = () => {
       <form>
         <label>show status</label>
         <select onChange={handleFilter}>
-          <option value="all">all</option>
           {createOptions(status)}
+          <option value="all">all</option>
         </select>
 
         <label>show type</label>
