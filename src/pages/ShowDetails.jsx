@@ -52,11 +52,13 @@ const ShowDetails = () => {
     status,
     rating,
     summary,
+    runtime,
     network,
     schedule,
     language,
     premiered,
     officialSite,
+    webChannel,
   } = show;
 
   return (
@@ -127,9 +129,13 @@ const ShowDetails = () => {
                 <ul className="list-unstyled">
                   <li>
                     <strong>Web channel: </strong>
-                    {network && network.country.name} -{network && network.name}{" "}
-                    -{premiered ? premiered.slice(0, 4) : ""}
-                    {ended ? `-${ended.slice(0, 4)}` : ""}
+                    {network && network.name}
+                    {" - "}
+                    {network && network.country.name} {" - "}
+                    {webChannel !== null && webChannel.name} {" - "}
+                    {webChannel !== null && webChannel.country.name} {" - "}
+                    {premiered ? premiered.slice(0, 4) : ""}
+                    {ended ? ` : ${ended.slice(0, 4)}` : ""}
                   </li>
                   <li>
                     <strong>Language: </strong>{" "}
@@ -142,6 +148,10 @@ const ShowDetails = () => {
                   </li>
                   <li>
                     <strong>Status: </strong> {status ? status : "unknown"}
+                  </li>
+                  <li>
+                    <strong>Run Time: </strong>{" "}
+                    {runtime ? `${runtime} minutes` : "unknown"}
                   </li>
                   <li>
                     <strong>Show Type: </strong> {type ? type : "unknown"}

@@ -114,6 +114,9 @@ body {
   height: 35px;
   width: 90%;
   padding: 5px;
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
+  color: #fff;
 }
 .filters label {
   text-transform: capitalize;
