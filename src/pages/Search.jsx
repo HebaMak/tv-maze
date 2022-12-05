@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { context } from "../hooks/context";
 import useFetch from "../hooks/useFetch";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 import Pagination from "../components/Pagination";
+import SearchField from "../components/SearchField";
 
 const Search = () => {
-  const [searchValue, setSearchValue] = useState("");
+  const { searchValue, setSearchValue, handleChange } = useContext(context);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
@@ -50,16 +53,12 @@ const Search = () => {
 
   return (
     <div className="container searching-page">
-      <form className="searchField-form d-flex" onSubmit={handleSearch}>
-        <input
-          type="text"
-          className="search-input"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-          placeholder="search shows"
-        />
-        <i className="fa fa-search search-btn" onClick={handleSearch}></i>
-      </form>
+      <SearchField
+        placeholder="Search Shows..."
+        handleSearch={handleSearch}
+        handleChange={handleChange}
+      />
+
       <div className="form">
         <form onSubmit={handleSearch}>
           <input
@@ -67,7 +66,7 @@ const Search = () => {
             className="form-control"
             placeholder="search shows ..."
             value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
+            onChange={handleChange}
           />
           <button className="btn form-control search-btn">Search</button>
           <button

@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { context } from "../hooks/context";
 
-const SearchField = ({ placeholder }) => {
-  const { searchValue, handleSearch, handleChange } = useContext(context);
+const SearchField = ({ placeholder, handleSearch, handleChange }) => {
+  const { searchValue } = useContext(context);
 
   return (
     <>
