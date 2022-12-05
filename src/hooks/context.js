@@ -4,37 +4,42 @@ import useFetch from "./useFetch";
 export const context = createContext();
 
 const ContextProvider = ({ children }) => {
-  const [shows, setShows] = useState("");
-  const [searchValue, setSearchValue] = useState("");
-  const [results, setResults] = useState([]);
-  const [filteredShows, setFilteredShows] = useState([]);
-
-  const [favorites, setFavorites] = useState(
-    localStorage.getItem("favorites")
-      ? JSON.parse(localStorage.getItem("favorites"))
-      : []
-  );
-
   const {
     data: allShows,
     isError,
     isLoading,
   } = useFetch("https://api.tvmaze.com/shows");
 
+  const [searchValue, setSearchValue] = useState("");
   const { data: searchResults } = useFetch(
     `https://api.tvmaze.com/search/shows?q=${searchValue}`
+  );
+
+  const { data: allPeople } = useFetch(`https://api.tvmaze.com/people`);
+  const [people, setPeople] = useState(allPeople);
+  const [shows, setShows] = useState("");
+  const [results, setResults] = useState([]);
+  const [filteredShows, setFilteredShows] = useState([]);
+  const [error, setError] = useState(false);
+  const [favorites, setFavorites] = useState(
+    localStorage.getItem("favorites")
+      ? JSON.parse(localStorage.getItem("favorites"))
+      : []
   );
 
   useEffect(() => {
     if (searchResults.length === 0) {
       setShows(allShows);
     }
+
     if (filteredShows.length !== 0) {
       setShows(filteredShows);
     }
 
+    setPeople(allPeople);
+
     localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [allShows, shows, favorites, searchResults, filteredShows]);
+  }, [allShows, shows, favorites, searchResults, filteredShows, allPeople]);
 
   //functions for favorite page
   const handleFavorite = (id) => {
@@ -60,9 +65,38 @@ const ContextProvider = ({ children }) => {
     setSearchValue(e.target.value);
   };
 
-  const handleSearch = (e) => {
+  const handleSearchHome = (e) => {
     e.preventDefault();
     setResults(searchResults);
+  };
+
+  // functions for people page
+  const handleChangePeople = (e) => {
+    e.preventDefault();
+    setSearchValue(e.target.value);
+
+    if (e.target.value === "") {
+      setPeople(allPeople);
+      setError(false);
+    }
+  };
+
+  const handleSearchPeople = (e) => {
+    e.preventDefault();
+
+    const value = searchValue.toLowerCase();
+    const filtered = people.filter((person) => {
+      setError(false);
+      return person.name.toLowerCase().includes(value);
+    });
+
+    if (filtered.length === 0) {
+      setError(true);
+      setPeople([]);
+    } else {
+      setError(false);
+      setPeople(filtered);
+    }
   };
 
   //functions and variables for filter sidebar
@@ -151,8 +185,10 @@ const ContextProvider = ({ children }) => {
   const value = {
     shows,
     isFav,
+    error,
     types,
     status,
+    people,
     results,
     isError,
     runTimes,
@@ -163,13 +199,15 @@ const ContextProvider = ({ children }) => {
     countries,
     webChannels,
     searchValue,
-    handleSearch,
     handleChange,
     handleFilter,
     createOptions,
     networksNames,
     handleFavorite,
     clearFavorites,
+    handleSearchHome,
+    handleSearchPeople,
+    handleChangePeople,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };

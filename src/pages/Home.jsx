@@ -8,11 +8,16 @@ import SearchField from "../components/SearchField";
 import FilterSidebar from "../components/FilterSidebar";
 
 function Home() {
-  const { shows, isLoading, isError, results } = useContext(context);
+  const { shows, isLoading, isError, results, handleSearchHome, handleChange } =
+    useContext(context);
 
   return (
     <div className="container homepage">
-      <SearchField placeholder="Search Shows..." />
+      <SearchField
+        placeholder="Search Shows..."
+        handleSearch={handleSearchHome}
+        handleChange={handleChange}
+      />
       <Ads />
       <div className="home-content">
         <div className="shows">
