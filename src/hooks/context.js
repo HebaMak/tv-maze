@@ -79,22 +79,6 @@ const ContextProvider = ({ children }) => {
     }
   };
 
-  // const handleSearchPeople = (e) => {
-  //   e.preventDefault();
-  //   const filtered = people.filter((person) => {
-  //     setError(false);
-  //     return person.name.toLowerCase().includes(searchValue.toLowerCase());
-  //   });
-
-  //   if (filtered.length === 0) {
-  //     setError(true);
-  //     setPeople([]);
-  //   } else {
-  //     setError(false);
-  //     setPeople(filtered);
-  //   }
-  // };
-
   const handleSearchPeople = (e) => {
     e.preventDefault();
     const filtered = people.filter((person) =>
@@ -203,6 +187,8 @@ const ContextProvider = ({ children }) => {
     results,
     isError,
     runTimes,
+    allPeople,
+    setPeople,
     languages,
     isLoading,
     favorites,

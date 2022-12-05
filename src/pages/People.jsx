@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { context } from "../hooks/context.js";
 import Pagination from "../components/Pagination";
 import SearchField from "../components/SearchField";
@@ -9,6 +9,8 @@ import Ads from "../components/Ads";
 const People = () => {
   const {
     error,
+    allPeople,
+    setPeople,
     people,
     isError,
     isLoading,
@@ -16,6 +18,10 @@ const People = () => {
     handleSearchPeople,
     handleChangePeople,
   } = useContext(context);
+
+  useEffect(() => {
+    setPeople(allPeople);
+  }, [allPeople, setPeople]);
 
   return (
     <div className="container people-page">
