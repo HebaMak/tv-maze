@@ -18,7 +18,7 @@ function Home() {
         <div className="shows">
           <h1>Shows</h1>
           {isLoading && (
-            <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming 😀" />
+            <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming" />
           )}
           {isError && <Error text="Error in Fetching data" />}
           {results.length > 0 ? (
