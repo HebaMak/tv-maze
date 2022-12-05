@@ -77,7 +77,7 @@ const ContextProvider = ({ children }) => {
   const status = [...new Set(shows && shows.map((show) => show.status))];
   const types = [...new Set(shows && shows.map((show) => show.type))];
   const languages = [...new Set(shows && shows.map((show) => show.language))];
-  const runtimes = [
+  const runTimes = [
     ...new Set(
       shows && shows.map((show) => show.runtime).filter((show) => show !== null)
     ),
@@ -150,26 +150,26 @@ const ContextProvider = ({ children }) => {
 
   const value = {
     shows,
-    isError,
-    isLoading,
     isFav,
-    handleFavorite,
+    types,
+    status,
+    results,
+    isError,
+    runTimes,
+    languages,
+    isLoading,
     favorites,
-    clearFavorites,
+    getGenres,
+    countries,
+    webChannels,
     searchValue,
     handleSearch,
     handleChange,
-    results,
     handleFilter,
-    networksNames,
-    countries,
-    status,
-    types,
-    languages,
-    runtimes,
-    webChannels,
-    getGenres,
     createOptions,
+    networksNames,
+    handleFavorite,
+    clearFavorites,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };

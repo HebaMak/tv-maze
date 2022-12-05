@@ -1,8 +1,8 @@
-import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import Error from "../components/Error";
-import Loading from "../components/Loading";
+import useFetch from "../hooks/useFetch";
 import FavIcon from "../components/FavIcon";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 const ShowDetails = () => {
   const { id } = useParams();
@@ -57,8 +57,8 @@ const ShowDetails = () => {
     schedule,
     language,
     premiered,
-    officialSite,
     webChannel,
+    officialSite,
   } = show;
 
   return (

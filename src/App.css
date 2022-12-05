@@ -2,8 +2,8 @@
 :root {
   --dark-color: rgb(82, 99, 94);
   --darker: rgb(71, 84, 80);
-  /* --light-color: rgb(155, 211, 195); */
   --light-color: rgb(113, 251, 212);
+  --light-color-two: rgb(155, 211, 195);
   --light-white: rgb(240, 248, 246);
   --dark-black: #212528;
 }
@@ -124,7 +124,6 @@ body {
   font-size: 18px;
   font-weight: 500;
 }
-
 .filters option {
   text-transform: capitalize;
 }
