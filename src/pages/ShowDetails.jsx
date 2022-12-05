@@ -1,8 +1,8 @@
-import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import Error from "../components/Error";
-import Loading from "../components/Loading";
+import useFetch from "../hooks/useFetch";
 import FavIcon from "../components/FavIcon";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 
 const ShowDetails = () => {
   const { id } = useParams();
@@ -13,18 +13,6 @@ const ShowDetails = () => {
   const { data: cast } = useFetch(`${URL}/${ID}/cast`);
   const { data: episodes } = useFetch(`${URL}/${ID}/episodes`);
   const { data: crew } = useFetch(`${URL}/${ID}/crew`);
-
-  // const [show , setShow] = useState({})
-
-  //clear summary
-  const removeTags = (text) => {
-    if (text === null || text === "") {
-      return false;
-    } else {
-      text = text.toString();
-    }
-    return text.replace(/(<([^>]+)>)/gi, "");
-  };
 
   // show creators
   const Creators = () => {
@@ -64,14 +52,14 @@ const ShowDetails = () => {
     status,
     rating,
     summary,
+    runtime,
     network,
     schedule,
     language,
     premiered,
+    webChannel,
     officialSite,
   } = show;
-
-  console.log("show", show);
 
   return (
     <div className="container show-details">
@@ -79,6 +67,7 @@ const ShowDetails = () => {
       {isError && <Error text="Something Went Wrong" />}
       {show && (
         <>
+          <h2 className="show_title">{name} Show Details</h2>
           <div className="show-details-container">
             <div className="container-cart">
               <img
@@ -127,9 +116,9 @@ const ShowDetails = () => {
                 )}
                 <h5 className="summary">Summary:</h5>
                 <p>
-                  {summary === null
+                  {summary === null || summary === ""
                     ? "No Summary"
-                    : summary && removeTags(summary)}
+                    : summary && summary.replace(/(<([^>]+)>)/gi, "")}
                 </p>
               </div>
             </div>
@@ -140,9 +129,13 @@ const ShowDetails = () => {
                 <ul className="list-unstyled">
                   <li>
                     <strong>Web channel: </strong>
-                    {network.country.name} -{network.name} -
+                    {network && network.name}
+                    {" - "}
+                    {network && network.country.name} {" - "}
+                    {webChannel !== null && webChannel.name} {" - "}
+                    {webChannel !== null && webChannel.country.name} {" - "}
                     {premiered ? premiered.slice(0, 4) : ""}
-                    {ended ? `-${ended.slice(0, 4)}` : ""}
+                    {ended ? ` : ${ended.slice(0, 4)}` : ""}
                   </li>
                   <li>
                     <strong>Language: </strong>{" "}
@@ -155,6 +148,10 @@ const ShowDetails = () => {
                   </li>
                   <li>
                     <strong>Status: </strong> {status ? status : "unknown"}
+                  </li>
+                  <li>
+                    <strong>Run Time: </strong>{" "}
+                    {runtime ? `${runtime} minutes` : "unknown"}
                   </li>
                   <li>
                     <strong>Show Type: </strong> {type ? type : "unknown"}
@@ -202,9 +199,9 @@ const ShowDetails = () => {
                     return (
                       <div className="person d-flex" key={person.id}>
                         <img
-                          alt={person.person.name}
+                          alt={person && person.person.name}
                           src={
-                            person.person.image
+                            person && person.person.image
                               ? person.person.image.medium
                               : "https://plchldr.co/i/210x295"
                           }

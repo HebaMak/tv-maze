@@ -41,8 +41,11 @@ const About = () => {
           <li>I use Bootsrtap Navbar, cards, Modal and carousel.</li>
           <li>The app is responsive for different devices screen.</li>
           <li>
-            I watched this video https://www.youtube.com/watch?v=zDwgTRkPkF4 and
-            took some ideas from it
+            I watched this video &nbsp;
+            <a href="https://www.youtube.com/watch?v=zDwgTRkPkF4">
+              TV Show React App
+            </a>
+            &nbsp; and took some ideas from it
           </li>
         </ol>
       </div>

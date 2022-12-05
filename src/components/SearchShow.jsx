@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import FavIcon from "./FavIcon";
 
-const SingleShow = ({ show }) => {
-  const { id, name, image, rating } = show;
+const SearchShow = ({ show }) => {
+  const { id, name, image } = show.show;
 
   return (
     <div className="card-container">
@@ -20,7 +20,7 @@ const SingleShow = ({ show }) => {
           <FavIcon id={id} />
           <div>
             <i className="fa fa-solid fa-star me-2"></i>
-            <span>{rating.average}</span>
+            <span>{(show.score * 10).toFixed(1)}</span>
           </div>
         </div>
       </div>
@@ -28,4 +28,4 @@ const SingleShow = ({ show }) => {
   );
 };
 
-export default SingleShow;
+export default SearchShow;
