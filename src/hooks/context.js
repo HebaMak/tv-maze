@@ -36,10 +36,8 @@ const ContextProvider = ({ children }) => {
       setShows(filteredShows);
     }
 
-    setPeople(allPeople);
-
     localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [allShows, shows, favorites, searchResults, filteredShows, allPeople]);
+  }, [allShows, shows, favorites, searchResults, filteredShows]);
 
   //functions for favorite page
   const handleFavorite = (id) => {
@@ -81,21 +79,34 @@ const ContextProvider = ({ children }) => {
     }
   };
 
+  // const handleSearchPeople = (e) => {
+  //   e.preventDefault();
+  //   const filtered = people.filter((person) => {
+  //     setError(false);
+  //     return person.name.toLowerCase().includes(searchValue.toLowerCase());
+  //   });
+
+  //   if (filtered.length === 0) {
+  //     setError(true);
+  //     setPeople([]);
+  //   } else {
+  //     setError(false);
+  //     setPeople(filtered);
+  //   }
+  // };
+
   const handleSearchPeople = (e) => {
     e.preventDefault();
+    const filtered = people.filter((person) =>
+      person.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
 
-    const value = searchValue.toLowerCase();
-    const filtered = people.filter((person) => {
-      setError(false);
-      return person.name.toLowerCase().includes(value);
-    });
+    setError(false);
+    setPeople(filtered);
 
     if (filtered.length === 0) {
       setError(true);
       setPeople([]);
-    } else {
-      setError(false);
-      setPeople(filtered);
     }
   };
 

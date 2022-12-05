@@ -41,7 +41,7 @@ const People = () => {
             </button>
           </>
         )}
-        {people && <Pagination shows={people} num="60" people />}
+        {people && !error && <Pagination shows={people} num="60" people />}
       </div>
     </div>
   );

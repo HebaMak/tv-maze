@@ -194,7 +194,7 @@ body {
 .error h2 {
   font-size: 30px;
   letter-spacing: 1px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 /* favorite icon */
@@ -384,7 +384,7 @@ body {
   min-height: 100vh;
 }
 .people-page h1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .pagination-person {
   overflow: hidden;
