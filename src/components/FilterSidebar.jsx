@@ -3,17 +3,16 @@ import { context } from "../hooks/context";
 
 const FilterSidebar = () => {
   const {
-    shows,
-    handleFilter,
-    countries,
-    networksNames,
-    status,
     types,
+    status,
+    runTimes,
+    countries,
     languages,
-    runtimes,
-    webChannels,
-    createOptions,
     getGenres,
+    webChannels,
+    handleFilter,
+    networksNames,
+    createOptions,
   } = useContext(context);
 
   return (
@@ -65,7 +64,7 @@ const FilterSidebar = () => {
         <label>runtime</label>
         <select onChange={handleFilter}>
           <option value="all">all</option>
-          {createOptions(runtimes, "minutes")}
+          {createOptions(runTimes, "minutes")}
         </select>
 
         <label>rating</label>
