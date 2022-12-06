@@ -210,6 +210,9 @@ body {
 /* about */
 .about-page {
   min-height: 100vh;
+  padding-bottom: 50px;
+  font-size: 18px;
+  line-height: 2;
 }
 .about-page li {
   text-transform: capitalize;
