@@ -21,15 +21,14 @@ function Home() {
       <Ads />
       <div className="home-content">
         <div className="shows">
-          <h1>Shows</h1>
           {isLoading && (
             <Loading text="Don't Break Your Screen Yet!?😀 Shows are coming" />
           )}
           {isError && <Error text="Error in Fetching data" />}
           {results.length > 0 ? (
-            <Pagination shows={results} num="15" search />
+            <Pagination shows={results} num="15" search title="Show" />
           ) : (
-            <>{shows && <Pagination shows={shows} num="15" />}</>
+            <>{shows && <Pagination shows={shows} num="15" title="Shows" />}</>
           )}
         </div>
         <div className="filters">

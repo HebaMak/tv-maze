@@ -3,7 +3,7 @@ import Person from "./Person";
 import SearchShow from "./SearchShow";
 import SingleShow from "./SingleShow";
 
-const Pagination = ({ shows, num, people, search }) => {
+const Pagination = ({ shows, num, people, search, title }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const showsPerPage = +num;
 
@@ -38,6 +38,7 @@ const Pagination = ({ shows, num, people, search }) => {
 
   return (
     <nav aria-label="Page navigation example pagination_page">
+      <h1>{title}</h1>
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link prv_next" href="!#" onClick={prevPage}>

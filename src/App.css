@@ -15,7 +15,6 @@
 body {
   padding-top: 150px;
 }
-
 /* navbar page */
 .top-navbar {
   height: 80px;
@@ -39,6 +38,9 @@ body {
   top: 23px;
   font-size: 22px;
   font-weight: 500
+}
+.modal {
+  padding: 50px;
 } 
 .topbar-container .login-register {
   padding: 18px 0;
@@ -90,9 +92,6 @@ body {
 /* home page */
 .homepage {
   min-height: 100vh;
-}
-.homepage h1 {
-  margin-bottom: 20px;
 }
 .home-content {
   display: flex;
@@ -192,7 +191,7 @@ body {
 }
 .loading h2 ,
 .error h2 {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 1px;
   margin: 30px auto;
 }
@@ -365,6 +364,9 @@ body {
   margin-bottom: 30px;
   justify-content: center;
 }
+.pagination_page h1 {
+  margin-bottom: 20px;
+}
 .pagination_body {
   display: flex;
   flex-wrap: wrap;
@@ -388,9 +390,6 @@ body {
   margin-bottom: 20px;
   position: relative;
   min-height: 100vh;
-}
-.people-page h1 {
-  margin-bottom: 20px;
 }
 .pagination-person {
   overflow: hidden;
@@ -632,7 +631,7 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
-  .homepage h1 {
+  .pagination_page h1 {
     font-size: 26px;
   }
   .home-content {
@@ -801,7 +800,7 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
-  .homepage h1 {
+  .pagination_page h1 {
     font-size: 26px;
   }
   .home-content {
@@ -967,7 +966,7 @@ body {
   .navbar .login-register >:first-child {
     margin-right: 20px;
   }
-  .homepage h1 {
+  .pagination_page h1 {
     font-size: 28px;
   }
   .home-content {
@@ -983,6 +982,7 @@ body {
     display: inline;
     width: 30%;
     margin-right: 5%;
+    margin-left: 0;
   }
   .filters label {
     display: inline-block;
@@ -1064,9 +1064,6 @@ body {
   .navbar-nav .nav-link {
     font-size: 20px;
   }
-  .homepage h1 {
-    font-size: 34px;
-  }
   .favorites_page h1 {
     font-size: 36px;
   }
@@ -1095,4 +1092,3 @@ body {
     width: 80%;
   }
 }
-

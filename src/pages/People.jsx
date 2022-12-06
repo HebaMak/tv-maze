@@ -26,8 +26,6 @@ const People = () => {
   return (
     <div className="container people-page">
       <Ads />
-
-      <h1>People</h1>
       <SearchField
         placeholder="Search People ..."
         handleSearch={handleSearchPeople}
@@ -47,7 +45,9 @@ const People = () => {
             </button>
           </>
         )}
-        {people && !error && <Pagination shows={people} num="60" people />}
+        {people && !error && (
+          <Pagination shows={people} num="60" people title="People" />
+        )}
       </div>
     </div>
   );

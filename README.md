@@ -29,9 +29,9 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     *   if there is an error during the fetching data process an error message and image will show up which is the Error component
     *   before displaying the data fetched from the API there is a loading message and image showed up which is the Loading component
 
-    * Home Page screenshot: 
+    * Home Page screenshot
     
-[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670335929/HYF/React/tv-maze/xnobafhaijlgkocqrjwj.png)](https://some-url.dev/)
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670337804/HYF/React/tv-maze/jrkdxghnmzvf3op098g5.png)](https://some-url.dev/)
 
 
 2.  **ShowDetails page:**
@@ -78,14 +78,39 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     *   if the user enters a name not in the people data API, the error image and message "There is No person with the name (Entered Name) " will appear, and Back to People button which refresh the page and back People Page.
     *   the Loading image and message also will appear before the data fetched from API.
     *   when the user clear the SearchField, all people data will displayed once again.
+
+    * People page screen shot
+
+    [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670337945/HYF/React/tv-maze/mr4mlpzwqvwwxav4yaly.png)](https://some-url.dev/)
+
+    * Searching for a certain person 
+
+     [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670338130/HYF/React/tv-maze/ks5ondqb1cshm130bwzh.png)](https://some-url.dev/)
+
+
+    * Error message when user searching for a person not found 
+
+     [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670338796/HYF/React/tv-maze/m23fff1tx87bi3ecvkbv.jpg)](https://some-url.dev/)
+
+
 5.  **Favorite page:**
     *   the favorites page contains the all the shows that user click on their hearts to be favorites.
     *   the favorites shows displayed in a pagination each page displayed 20 show.
     *   there is a Clear Favorites button to clear the page from favorites, and it is appear only when there are favorites shows in the page.
     *   if there are no favorites shows in the page there is a message "You Haven't Chosen any Favorites yet!" and a nice gif image.
     *   the app remembers the favorite shows by stored the latest favorites in localStorage when user reload or refresh the app.
+
+    * Favorites shows list
+
+     [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670338893/HYF/React/tv-maze/yatanifszeaz9yc2zoyk.png)](https://some-url.dev/)
+
+
 6.  **About page:**
     *   the page contains all data about the app, components, pages, styles and images like the readMe page.
+
+* About page screen shot
+
+     [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670338949/HYF/React/tv-maze/zb2aliutnm4okdoo4tfv.png)](https://some-url.dev/)
 
 
 *   **Hooks folder:**
@@ -109,15 +134,27 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
         *   I used the Bootstrap Modal and I update it.
         *   used the same code in Login and Register pages.
 
+        * Login & Register components
+
+     [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670340777/HYF/React/tv-maze/cytc9metbzcauic8muge.jpg)](https://some-url.dev/)
+
     4.  **Error:**
         *   contains an image a message which changed according to the position that component used it.
         *   the page called the Error passes an Error message to it as a prop.
         *   the Error components appears when the data can't fetched correctly or when user searches for something not found.
 
+        * Error Image and Message
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670341404/HYF/React/tv-maze/dbj50t6fvhxmhwgqsvuc.jpg)](https://some-url.dev/)
+
     5.  **Loading:**
         *   contains an image a message which changed according to the position that component used it.
         *   the page called the Loading passes an Loading message to it as a prop.
         *   the Loading components appears before fetching any data.
+
+        * Loading Image and Message
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670341232/HYF/React/tv-maze/fklw1itpndwmsqklpezq.jpg)](https://some-url.dev/)
 
     6.  **FavIcon:**
         *   the Hear, which appears in a white color for all shows displayed in home page, search page and show details page .
@@ -128,12 +165,20 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     7.  **SingleShow:**
         *   displays some info about the show and the pagination of Home page use it.
 
+        * Single show
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670341608/HYF/React/tv-maze/qqtij4yfewdww5ns49lb.jpg)](https://some-url.dev/)
+
     8.  **SearchShow:**
         *   displays some info about the show and the pagination of search page use it.
 
     9.  **Person:**
         *   displays some info about the show and the pagination people page use it.
 
+        * Single person
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670341611/HYF/React/tv-maze/od0ofwz98pbycrwk4a2f.jpg)](https://some-url.dev/)
+        
     10.  **pagination:**
         *   I used the Bootstrap pagination and updated it.
         *   the pagination used in different pages and displayed different number of items and different component passed to it from the page call it.
@@ -142,16 +187,44 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
         *   contains two carousels which used in Home page and People page only.
         *   I used the Bootstrap Carousel for React using a specific package.
 
+        * Carousels screen shot
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670341726/HYF/React/tv-maze/x2etq6x51o1r20usoh5m.jpg)](https://some-url.dev/)
+
+
     12.  **FilterSidebar:**
         *   that component used once in the Home page.
         *   I used 9 select boxes with options to filter out the shows according to the values inside.
         *   OPTIONS get their values from the data of shows displayed dynamically
         *   user can filter out the shows according toShow status, Type, Genre, Language, Rating, Runtime, WebChannel, NetWork and Country.
 
+        * FilterSidebar screen shot
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670342098/HYF/React/tv-maze/c5pqofax6e6kzdu7er0e.jpg)](https://some-url.dev/)
+
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670342100/HYF/React/tv-maze/dvrkm6yite9ajbp6lnrv.jpg)](https://some-url.dev/)
+        
+
     13.  **Footer:**
         *   footer contains some font awesome of the app.
         *   each font awesome direct to the tv-maze original sites Facebook, Twitter, Instagram and Reddit.
 
+        * Footer Screen shot
+         [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670342259/HYF/React/tv-maze/u1sw8h55kyh9jdniebfe.jpg)](https://some-url.dev/)
+
 *   I use Bootsrtap Navbar, Pagination, cards, Modal and carousel.
 *   The app is Responsive for different devices screen.
+
+* Screen shots in small screens
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670343309/HYF/React/tv-maze/srxurpo7xjcnhkcgfwxb.png)](https://some-url.dev/)
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670343310/HYF/React/tv-maze/hdxublol4zs4fzawcwyz.jpg)](https://some-url.dev/)
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670343309/HYF/React/tv-maze/pehy92saqygsdyezbxju.png)](https://some-url.dev/)
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670343309/HYF/React/tv-maze/fc4wnkbrfbisid2ghzjn.png)](https://some-url.dev/)
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670343309/HYF/React/tv-maze/zacamlg2vrlyvj2thgmb.jpg)](https://some-url.dev/)
+
 *   The Original Tv-Maze site: [**TV-Maze Site**](https://www.tvmaze.com/shows)
