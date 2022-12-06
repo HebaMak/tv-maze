@@ -99,20 +99,20 @@ body {
   justify-content: space-between;
 }
 .home-content .shows {
-  width: 82%;
+  width: 80%;
 }
 
 /* filter sidebar  */
 .filters {
   width: 15%;
   margin: 0 auto;
-  padding: 10px;
 }
 .filters select {
   margin: 10px auto 30px;
   display: block;
   height: 35px;
   width: 90%;
+  margin-left: 10%;
   padding: 5px;
   border: 1px solid var(--dark-color);
   background-color: var(--dark-color);
