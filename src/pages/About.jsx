@@ -398,17 +398,17 @@ const About = () => {
                   <li>
                     user can filter out the shows according toShow status, Type,
                     Genre, Language, Rating, Runtime, WebChannel, NetWork and
-                    Country
+                    Country.
                   </li>
                 </ul>
               </li>
               <li>
                 <strong>Footer: </strong>
                 <ul>
-                  <li> footer contains some font awesome of the app</li>
+                  <li> footer contains some font awesome of the app.</li>
                   <li>
                     each font awesome direct to the tv-maze original sites
-                    Facebook, Twitter, Instagram and Reddit
+                    Facebook, Twitter, Instagram and Reddit.
                   </li>
                 </ul>
               </li>
