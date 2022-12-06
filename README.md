@@ -3,7 +3,12 @@
 **TV-Maze**   tv shows app is an application the user can use to searching for different types of shows comedy, drama or animation, etc...  
 I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation.
 
-#### The App features :
+###### The App link on Netlify is: https://hapi-tv-maze-like.netlify.app/
+
+#### The App features:
+
+* App Screen Shot: 
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670335929/HYF/React/tv-maze/xnobafhaijlgkocqrjwj.png)](https://some-url.dev/)
 
 *   The app consists of 3 folders Pages , Components and Hooks
 *   **Pages:** in which many pages are found, Home , Search , People , Favorites , About app , Login and Register and ShowDetails pages.
@@ -17,14 +22,28 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     *   each SingleShow has a poster for the show, the show name, rating and a white heart icon which let the user put the show in the favorite list by clicking on it to turn to the red heart.
     *   contains the components: Navbar , Login , Register, pagination, SearchField , FilterSidebar and the Footer in the mobile and tab screens the components.
     *   Login and Register replaced by the Pages Login and Register.
-    *   user directed to the details page when clicks on any show, the different information about each show fetched from 4 or 5 APIs, all information about the show: the Name , Poster, show types, status, rating, summary, web channel displayed on, language, country, cast, ... and others are fetched according to the show id.
+    *   User clicks on any show directed to the show details page.
     *   user can search for any show by using the SearchField in the Navbar and the results displayed in the main pagination of the homepage in number of pages depend on the results shows number
     *   user can filter out the shows according to the show status, type, genre, language, country, network, web channel, runtime and rating by using the FilterSidebar and the results displayed in the pagination as the search results.
     *   if the user clear the search field the original data displayed once again
     *   if there is an error during the fetching data process an error message and image will show up which is the Error component
     *   before displaying the data fetched from the API there is a loading message and image showed up which is the Loading component
 
-2.  **Search page:**
+    * Home Page screenshot: 
+    
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670335929/HYF/React/tv-maze/xnobafhaijlgkocqrjwj.png)](https://some-url.dev/)
+
+
+2.  **ShowDetails page:**
+ *   user directed to the details page when clicks on any show, the different information about each show fetched from 4 or 5 APIs.
+ *   all information about the show: the Name , Poster, show types, status, rating, summary, web channel displayed on, language, country, cast, ... and others are fetched according to the show id
+
+* Show details screenshot: 
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670336126/HYF/React/tv-maze/gzodjvv2wzsqobhrjm5c.png)](https://some-url.dev/)
+
+
+3.  **Search page:**
     *   User can search for shows using Search field in the Navbar or in another form in the page are connected to gether to give the same results if the user use one of therm
     *   the use search for shows in unlimited API different from that used to display shows in Homepage
     *   the results are displayed inside a pagination of pages each page displays 50 shows according to the search results.
@@ -33,9 +52,25 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     *   the app remembers the latest searching results that stored in the localStorage when user reload or refresh the app
     *   if the user enters search without entering any searching data there is an error image and message "Please enter a Show Name ..."
     *   id the user enters a name of data does not exist in the API data, the error image and a different error message "there No Shows with the Name (the entered name)" will appear.
-    *   the loading image and message also appear before the requested data displayed
+    *   the loading image and message also appear before the requested data displayed.
 
-3.  **People page:**
+    * Show details screenshot: 
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670336931/HYF/React/tv-maze/xf18csmwb4tjlarcp2cz.png)](https://some-url.dev/)
+
+    * Loading Image and Message
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670336931/HYF/React/tv-maze/xnj2vzmvbmzt63btvr4x.jpg)](https://some-url.dev/)
+
+    * Error Image and Message, when user does not enter any name
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670337340/HYF/React/tv-maze/tdi7zrgmcbmfzdknr92m.jpg)](https://some-url.dev/)
+
+    * Error Image and Message, when user enters a name not found
+
+[![Header](https://res.cloudinary.com/hapiii/image/upload/v1670337239/HYF/React/tv-maze/jyjhc5ewbg0nmpcvbhx7.jpg)](https://some-url.dev/)
+
+4.  **People page:**
     *   the page displays different actresses and actors photo and Name in a pagination of pages each page displayed 60 person
     *   The pagination uses the component Person which has information different from the SingleShow and SearchShow.
     *   when user hovers over each person, an overlay on the show shows up with some information the country, birthday, death date and a link for other details direct to the person page in tv-maze original side
@@ -43,13 +78,13 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
     *   if the user enters a name not in the people data API, the error image and message "There is No person with the name (Entered Name) " will appear, and Back to People button which refresh the page and back People Page.
     *   the Loading image and message also will appear before the data fetched from API.
     *   when the user clear the SearchField, all people data will displayed once again.
-4.  **Favorite page:**
+5.  **Favorite page:**
     *   the favorites page contains the all the shows that user click on their hearts to be favorites.
     *   the favorites shows displayed in a pagination each page displayed 20 show.
     *   there is a Clear Favorites button to clear the page from favorites, and it is appear only when there are favorites shows in the page.
     *   if there are no favorites shows in the page there is a message "You Haven't Chosen any Favorites yet!" and a nice gif image.
     *   the app remembers the favorite shows by stored the latest favorites in localStorage when user reload or refresh the app.
-5.  **About page:**
+6.  **About page:**
     *   the page contains all data about the app, components, pages, styles and images like the readMe page.
 
 

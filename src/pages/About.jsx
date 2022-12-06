@@ -99,16 +99,32 @@ const About = () => {
               </ul>
             </li>
             <li>
+              <strong>Show details page: </strong>
+              <ul>
+                <li>
+                  user directed to the details page when clicks on any show, the
+                  different information about each show fetched from 4 or 5
+                  APIs.
+                </li>
+                <li>
+                  all information about the show: the Name , Poster, show types,
+                  status, rating, summary, web channel displayed on, language,
+                  country, cast, ... and others are fetched according to the
+                  show id.
+                </li>
+              </ul>
+            </li>
+            <li>
               <strong>Search page: </strong>
               <ul>
                 <li>
                   User can search for shows using Search field in the Navbar or
                   in another form in the page are connected to gether to give
-                  the same results if the user use one of therm
+                  the same results if the user use one of them.
                 </li>
                 <li>
                   the use search for shows in unlimited API different from that
-                  used to display shows in Homepage
+                  used to display shows in Homepage.
                 </li>
                 <li>
                   the results are displayed inside a pagination of pages each
