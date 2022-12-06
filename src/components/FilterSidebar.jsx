@@ -17,7 +17,7 @@ const FilterSidebar = () => {
 
   return (
     <>
-      <h1>Filters</h1>
+      <h3>Filters</h3>
       <form>
         <label>show status</label>
         <select onChange={handleFilter}>
