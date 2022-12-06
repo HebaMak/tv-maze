@@ -211,6 +211,9 @@ body {
 .about-page {
   min-height: 100vh;
 }
+.about-page li {
+  text-transform: capitalize;
+}
 .aboutpage-content {
   width: 90%;
   margin: auto;

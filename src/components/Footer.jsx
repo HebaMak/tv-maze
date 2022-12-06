@@ -6,16 +6,24 @@ const Footer = () => {
           <h6>Follow us on :</h6>
           <ul className="d-flex list-unstyled">
             <li>
-              <i className="facebook fab fa-facebook-square"></i>
+              <a href="https://www.facebook.com/tvmaze">
+                <i className="facebook fab fa-facebook-square"></i>
+              </a>
             </li>
             <li>
-              <i className="instagram fab fa-instagram"></i>
+              <a href="https://www.instagram.com/tvmazecom/">
+                <i className="instagram fab fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <i className="twitter fab fa-twitter-square"></i>
+              <a href="https://twitter.com/tvmaze">
+                <i className="twitter fab fa-twitter-square"></i>
+              </a>
             </li>
             <li>
-              <i className="reddit fab fa-reddit-alien"></i>
+              <a href="https://www.reddit.com/r/tvmaze/">
+                <i className="reddit fab fa-reddit-alien"></i>
+              </a>
             </li>
           </ul>
         </div>
