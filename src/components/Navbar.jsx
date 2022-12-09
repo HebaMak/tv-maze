@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Login from "./Login";
+import Register from "./Register";
 
 const Navbar = () => {
   const [isCollapsed, setCollapsed] = useState(false);
@@ -22,7 +24,10 @@ const Navbar = () => {
               <span>Tv-Maze</span>
             </Link>
           </div>
-
+          <div className="login-register">
+            <Login />
+            <Register />
+          </div>
         </div>
       </div>
 
@@ -48,6 +53,26 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink to="/" className="nav-link" aria-current="page">
                   Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/search" className="nav-link">
+                  Search
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/people" className="nav-link">
+                  People
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/favorites" className="nav-link">
+                  Favorites
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/about" className="nav-link">
+                  About
                 </NavLink>
               </li>
             </ul>
