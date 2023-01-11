@@ -119,7 +119,7 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
 
 - About page screenshot:
 
-  [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670338949/HYF/React/tv-maze/zb2aliutnm4okdoo4tfv.png)](https://some-url.dev/)
+  [![Header](https://res.cloudinary.com/hapiii/image/upload/v1670411751/HYF/React/tv-maze/us0ly8tpfwig5ip2ccls.png)](https://some-url.dev/)
 
 - **Hooks folder:**
 
