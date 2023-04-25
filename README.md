@@ -3,8 +3,9 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
 
 ###### The App link on Netlify is: https://hapi-tv-maze-like.netlify.app/
 
-### Technologies used:
+### Technologies used: Html5, Css3, Bootstrap 
 
+ 
 
 #### The App features:
 
