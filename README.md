@@ -3,7 +3,7 @@ I use - [Tvmaze](https://www.tvmaze.com/api) \-  API here is the documentation
 
 ###### The App link on Netlify is: https://hapi-tv-maze-like.netlify.app/
 
-## technologies used:
+### Technologies used:
 
 
 #### The App features:
